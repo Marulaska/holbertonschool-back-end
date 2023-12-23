@@ -23,7 +23,7 @@ def getUserTasks(EMPLOYEE_ID):
     print(f'Employee {EMPLOYEE["name"]} is done with tasks' +
           f'({NUMBER_OF_DONE_TASKS}/{NUMBER_OF_TOTAL_TASKS}):')
     for i in DONE_TASKS:
-        print(f'\t{i["title"]}')
+        print(f'\t {i["title"]}')
 
 
 if __name__ == "__main__":
