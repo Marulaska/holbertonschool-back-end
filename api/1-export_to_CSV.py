@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """_summary_
 """
+import csv
 import requests
 import sys
 import urllib
-import csv
 
 
 def getUserTasks(EMPLOYEE_ID):
@@ -18,7 +18,8 @@ def getUserTasks(EMPLOYEE_ID):
     EMPLOYEE = requests.get(f'{URL}/users/{EMPLOYEE_ID}').json()
     USERNAME = EMPLOYEE['username']
 
-    f = csv.writer(open(f"{EMPLOYEE_ID}.csv", "w", newline=''), quoting=csv.QUOTE_ALL)
+    f = csv.writer(open(f"{EMPLOYEE_ID}.csv", "w", newline=''),
+                   quoting=csv.QUOTE_ALL)
     # f.writer(open(f"{EMPLOYEE_ID}.csv", 'w', encoding='utf8'))
 
     for i in TOTAL_TASKS:
