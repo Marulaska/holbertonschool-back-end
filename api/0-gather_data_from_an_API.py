@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-import urllib
-import requests
-import sys
-
 """_summary_
 """
+import requests
+import sys
+import urllib
 
 
 def getUserTasks(EMPLOYEE_ID):
